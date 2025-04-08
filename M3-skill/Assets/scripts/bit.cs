@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class bit : MonoBehaviour
 {
+
     SpriteRenderer spriteRenderer;
-    public bool state = true;
-    // Start is called before the first frame update
+    public bool state = false;
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (state)
@@ -23,8 +22,8 @@ public class bit : MonoBehaviour
         {
             spriteRenderer.color = Color.red;
         }
-
     }
+
     private void OnMouseUp()
     {
         state = !state;
